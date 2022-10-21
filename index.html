@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+<title>Table</title>
+</head>
+<body>
+   <table class="table table-striped  table-hover">
+    <thead>
+    <tr>
+    <th class="table-primary">Comida</th>
+    <th class="table-primary">Nombre </th>
+    <th class="table-primary">Pais</th>
+    <th class="table-primary">Receta</th>
+    <th class="table-primary">Precio</th>
+    <th class="table-primary">Opcion</th>
+     </tr>
+    </thead>
+    <tbody class="table-group-divider">
+    <tr>
+        <td>
+            <figure class="figure">
+                <img src="imagen/Pupussa.jpg" width="100px" class="figure-img img-fluid rounded" alt="imagen de pupusa">
+                <figcaption class="figure-caption">Foto de patillo</figcaption>
+            </figure>
+          </td>
+        <td>Pupusa</td>
+        <td>El Salvador</td>
+        <td><span class="badge text-bg-info"><i style="color: aliceblue;" onclick="mensaje1()">Receta</i></span></td>
+        <td><span class="badge text-bg-warning"><i class="bi bi-cash" style="font-size: 1rem"></i>$5</span></td>
+        <td>
+    <button class="btn btn-info">
+        <i class="bi bi-pencil-square" style="font-size: 1.5rem; color: aliceblue;"></i>
+    </button>
+    <button class="btn btn-danger">
+        <i class="bi bi-archive-fill" style="font-size: 1.5rem; color: aliceblue;"></i>
+    </button>
+</td>
+ </tr>
+ <tr>
+ <td>
+    <figure class="figure">
+        <img src="imagen/Tamales.jpg" width="100px" class="figure-img img-fluid rounded" alt="imagen de tamales">
+        <figcaption class="figure-caption">Foto de patillo</figcaption>
+    </figure>
+  </td>
+<td>Nacatamales</td>
+<td>Honduras</td>
+<td><span class="badge text-bg-info"><i style="color: aliceblue;" onclick="mensaje2()">Receta</i></span></td>
+ <td><span class="badge text-bg-warning"><i class="bi bi-cash" style="font-size: 1rem "></i>$3</span></td>
+ <td>
+<button class="btn btn-info">
+<i class="bi bi-pencil-square" style="font-size: 1.5rem; color: aliceblue;"></i>
+</button>
+<button class="btn btn-danger">
+<i class="bi bi-archive-fill" style="font-size: 1.5rem; color: aliceblue;"></i>
+</button>
+</td>
+</tr>
+<tr>
+<td>
+    <figure class="figure">
+        <img src="imagen/Tacoss.jpg" width="100px" class="figure-img img-fluid rounded" alt="imagen de tacos">
+        <figcaption class="figure-caption">Foto de patillo</figcaption>
+    </figure>
+  </td>
+<td>Tacos</td>
+<td>Mexico</td>
+<td><span class="badge text-bg-info"><i style="color: aliceblue;" onclick="mensaje3()">Receta</i></span></td>
+<td><span class="badge text-bg-warning"><i class="bi bi-cash" style="font-size: 1rem "></i>$5</span></td>
+<td>
+<button class="btn btn-info">
+<i class="bi bi-pencil-square" style="font-size:1.5rem; color:aliceblue ;"></i>
+</button>
+<button class="btn btn-danger">
+<i class="bi bi-archive-fill" style="font-size:1.5rem; color: aliceblue;"></i>
+</button>
+</td>
+</tr>
+</tbody>
+<tfoot>
+    <tr>
+        <th>total</th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th>$$$</th>
+        <th></th>
+    </tr>
+</tfoot>
+</table> 
+</body>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"> </script>
+
+<script>
+    function mensaje1() {
+        swal.fire({
+            title: 'Receta',
+            text:'informacion de platillo',
+            imageUrl:'imagen/bandera.jpg',
+            imageWidth: 100,
+            imageAlt: 'Informacion de platillo',
+            html:
+            'Ingrediente 1: 1b harina de maiz.<br />' +
+            'Ingrediente 2: 1/2lb de frijol molido.<br />' +
+            'Ingrediente 3: 1/2b de queso.<br/>' +
+            'Ingrediente 4: 1b harina de maiz.<br/>' +
+            'Primero: Fritar los frijoles con aceite al gusto.<br/>' +
+            'Segundo: Revolver el harina con abundante agua.<br />' +
+            'Tercero: Raspar el queso duro.<br/>' +
+            'Cuarto: Hagarar un poquito de harina de maiz y colocar los frijoles par luego palmiar la pupusa.<br />',
+            focusConfirm: false,
+            confirmButtonText:
+            '<i class="fa fa-thumbs-up"></i> OK!',
+
+
+        })
+    }   
+</script>
+
+<script>
+    function mensaje2() {
+        swal.fire({
+            title: 'Receta',
+            text:'informacion de platillo',
+            imageUrl:'imagen/bandera de Honduras.jpg',
+            imageWidth: 100,
+            imageAlt: 'Informacion de platillo',
+            html:
+            'Ingrediente 1:2lb harina de maiz.<br/>' +
+            'Ingrediente 2:2 pechugas de pollo.<br/>' +
+            'Ingrediente 3:1lb de carne res.<br/>' +
+            'Ingrediente 4:1lb de carne de cerdo.<br/>' +
+            'Ingrediente 5:Verduras, papas, ejotes,aceituno.<br/>' +
+            'Primero:Cocinar la harina con aceite y jugo de tomate.<br/>' +
+            'Segundo:Cocinar la carne de res, pollo, cerdo.<br/>' +
+            'Tercero:Cocinar el caldo .<br/>' +
+            'Cuarto:Con una hoja de huerta colocar una cuchade masa preparada en medio de ella colocas la carne y verdura.<br/>' +
+            'Quinto:Cocinara afuego lento y listo.<br/>',
+             focusConfirm: false,
+            confirmButtonText:
+            '<i class="fa fa-thumbs-up"></i> OK!',
+        })
+    }   
+</script>
+
+<script>
+    function mensaje3() {
+        swal.fire({
+            title: 'Receta',
+            text:'informacion de platillo',
+            imageUrl:'imagen/bandera de Mexico.jpg',
+            imageWidth: 100,
+            imageAlt: 'Informacion de platillo',
+            html:
+            'Ingrediente 1:1lb harina de maiz.<br/>' +
+            'Ingrediente 2:2 pechugas de pollo.<br/>' +
+            'Ingrediente 3:lechuga, tomate, pepino, chile, cebolla, cilantro.<br/>' +
+            'Primero:Mesclar la harina de maiz con agua.<br/>' +
+            'Segundo:Cocinar la carne de pollo con comino, sal de ajo, cebolla y sal al gusto.<br/>' +
+            'Tercero:Hcer las tortillas .<br/>' +
+            'Cuarto:Cotar el tomate, pepino, cebolla, cilantro, lecchuga en cuadritos.<br/>' +
+            'Quinto:Colocarle  a la tortilla pico de gallo, lechuga y carne y listo.<br/>',
+             focusConfirm: false,
+            confirmButtonText:
+            '<i class="fa fa-thumbs-up"></i> OK!',
+        })
+    }   
+</script>
+</html>
